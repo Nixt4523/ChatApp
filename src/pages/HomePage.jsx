@@ -1,9 +1,7 @@
-import React from "react";
-
-import Sidebar from "../components/Sidebar";
 import Chat from "../components/Chat";
-import ImagePreview from "../components/ImagePreview";
 import EditProfileModal from "../components/EditProfileModal";
+import ImagePreview from "../components/ImagePreview";
+import Sidebar from "../components/Sidebar";
 
 function HomePage() {
 	return (

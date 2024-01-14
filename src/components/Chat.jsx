@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 
-import Messages from "./Messages";
 import ChatInput from "./ChatInput";
+import Messages from "./Messages";
 
-import { FullscreenContext } from "../context/FullscreenContext";
 import { ChatContext } from "../context/ChatContext";
+import { FullscreenContext } from "../context/FullscreenContext";
 import { ImagePreviewContext } from "../context/ImagePreviewContext";
 
 function Chat() {
@@ -64,7 +64,7 @@ function Chat() {
 					</div>
 				) : null}
 			</div>
-			<div className="overflow-y-scroll scroll-smooth max-h-[80%] md:max-h-[atuo] space-y-2 md:p-4 p-2 w-full">
+			<div className="overflow-y-scroll scroll-smooth max-h-[80%] md:max-h-[auto] space-y-2 md:p-4 p-2 w-full">
 				<Messages />
 			</div>
 			<div className="absolute bottom-0 z-50 w-full p-2 bg-base-200 h-fit">

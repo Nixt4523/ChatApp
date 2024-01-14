@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, createContext } from 'react';
 
 export const FullscreenContext = createContext();

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth, storage, db } from "../Firebase.js";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
+import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import { auth, db, storage } from "../Firebase.js";
 
 function RegisterPage() {
 	const [name, setName] = useState("");
@@ -23,7 +23,7 @@ function RegisterPage() {
 		if (email !== "" && password !== "" && name !== "" && surname !== "") {
 			setDisabled(false);
 		}
-	}, [email, password, name]);
+	}, [email, password, name, surname]);
 
 	async function registerUser() {
 		setDisabled(true);

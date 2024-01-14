@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -120,7 +120,7 @@ function LoginPage() {
 						<span className="text-sm text-error">Something went wrong..!</span>
 					)}
 					<p className="text-sm">
-						Don't have an account?
+						{"Don't have an account?"}
 						<span className=" cursor-pointer hover:underline hover:text-primary">
 							<Link to="/register"> Register</Link>
 						</span>

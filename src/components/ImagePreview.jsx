@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 import { ImagePreviewContext } from "../context/ImagePreviewContext";
 

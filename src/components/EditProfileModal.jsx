@@ -1,16 +1,16 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 
 import { AuthContext } from "../context/AuthContext";
 
-import { db, storage, auth } from "../Firebase";
-import {
-	ref,
-	deleteObject,
-	uploadBytesResumable,
-	getDownloadURL,
-} from "firebase/storage";
 import { updateProfile } from "firebase/auth";
 import { doc, updateDoc } from "firebase/firestore";
+import {
+	deleteObject,
+	getDownloadURL,
+	ref,
+	uploadBytesResumable,
+} from "firebase/storage";
+import { auth, db, storage } from "../Firebase";
 
 function EditProfileModal() {
 	const currentUser = useContext(AuthContext);
@@ -50,7 +50,7 @@ function EditProfileModal() {
 									photoURL: downloadURL,
 								});
 							} catch (error) {
-								console.log(err);
+								console.log(error);
 								setError(true);
 							}
 						});
@@ -209,7 +209,7 @@ function EditProfileModal() {
 						<div className="w-full flex gap-2 mt-2">
 							<button
 								disabled={disable}
-								className="btn btn-error flex-1 flex items-center gap-2 focus:outline-none"
+								className="btn btn-error text-white flex-1 flex items-center gap-2 focus:outline-none"
 								onClickCapture={resetChanges}
 							>
 								<svg
@@ -226,10 +226,10 @@ function EditProfileModal() {
 										d="M6 18L18 6M6 6l12 12"
 									/>
 								</svg>
-								close
+								Close
 							</button>
 							<div
-								className="btn btn-success flex-1 flex items-center gap-2"
+								className="btn btn-success text-white flex-1 flex items-center gap-2"
 								disabled={disable}
 								onClick={() => {
 									updateUser();
@@ -256,7 +256,7 @@ function EditProfileModal() {
 												d="M4.5 12.75l6 6 9-13.5"
 											/>
 										</svg>
-										save
+										Save
 									</>
 								)}
 							</div>
